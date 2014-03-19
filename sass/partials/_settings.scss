@@ -1,0 +1,24 @@
+@import "foundation/scss/foundation/functions";
+
+// Font Awesome
+$fa-font-path: "../../bower_components/font-awesome/fonts";
+
+// Typo
+$body-font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+
+// Off Canvas Nav
+$tabbar-bg: #242424;
+$off-canvas-bg: #242424;
+$tabbar-height: rem-calc(75);
+$tabbar-left-section-border: none;
+$tabbar-middle-padding: rem-calc(10);
+$off-canvas-overlay-background: rgba(#242424, 0.5);
+$off-canvas-overlay-background-hover: rgba(#242424, 0.1);
+
+// Colours
+// $primary-color: #008CBA;
+// $secondary-color: #e7e7e7;
+// $alert-color: #f04124;
+// $success-color: #43AC6A;
+// $warning-color: #f08a24;
+// $info-color: #a0d3e8;

@@ -1,0 +1,21 @@
+{
+  "name": "LSE-Africa-Summit",
+  "version": "0.0.0",
+  "authors": [
+    "Ian Lai <ian@fyianlai.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "font-awesome": "~4.0.3",
+    "foundation": "~5.2.1"
+  }
+}
