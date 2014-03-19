@@ -4,7 +4,8 @@
   "authors": [
     "Ian Lai <ian@fyianlai.com>"
   ],
-  "license": "MIT",
+  "main": "index.html",
+  "license": "http://ian.mit-license.org/",
   "private": true,
   "ignore": [
     "**/.*",

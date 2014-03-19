@@ -7,7 +7,12 @@
     "test": "grunt test"
   },
   "author": "Ian Lai <ian@fyianlai.com>",
-  "license": "MIT",
+  "licenses": [
+      {
+          "type": "MIT",
+          "url": "http://ian.mit-license.org/"
+      }
+  ],
   "dependencies": {
     "grunt": "^0.4.4",
     "grunt-contrib-compass": "^0.7.2"
