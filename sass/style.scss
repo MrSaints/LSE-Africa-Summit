@@ -99,3 +99,29 @@ body {
         }
     }
 }
+
+.twitter {
+    background: $primary-color;
+    color: #FFF;
+    padding: rem-calc(30) 0;
+
+    .fa-twitter {
+        font-size: rem-calc(50);
+        margin-bottom: rem-calc(15);
+    }
+}
+    .twitter-posted {
+        color: #FFF;
+        font-size: rem-calc(12);
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    .twitter-tweet {
+        color: #FFF;
+        margin: rem-calc(15) auto;
+    }
+    .twitter-follow {
+        border: 2px solid #FFF;
+        font-weight: 300;
+        margin: rem-calc(15) auto 0;
+    }
