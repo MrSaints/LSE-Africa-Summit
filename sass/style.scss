@@ -85,3 +85,17 @@ body {
             vertical-align: top;
         }
     }
+
+.multilevel {
+    &.active > a {
+        background: darken(#242424, 5%) !important;
+    }
+    .content li > a {
+        background: lighten(#242424, 10%);
+        border: none;
+
+        &:hover, &:focus {
+            background: #1abc9c;
+        }
+    }
+}

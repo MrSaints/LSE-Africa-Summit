@@ -28,7 +28,20 @@
 
             <aside class="right-off-canvas-menu">
                 <ul class="off-canvas-list">
-                    <li><a href="#">Item 1</a></li>
+                    <li>
+                        <dl class="accordion" data-accordion>
+                            <dd class="multilevel">
+                                <a href="#multilevel1">Item 1</a>
+                                <div id="multilevel1" class="content">
+                                    <ul class="side-nav">
+                                        <li><a href="#">Subitem 1</a></li>
+                                        <li class="divider"></li>
+                                        <li><a href="#">Subitem 2</a></li>
+                                    </ul>
+                                </div>
+                            </dd>
+                        </dl>
+                    </li>
                     <li><a href="#">Item 2</a></li>
                 </ul>
             </aside>
@@ -66,7 +79,7 @@
     </div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.js"></script>
     <script src="assets/js/application.js"></script>
 </body>
 </html>

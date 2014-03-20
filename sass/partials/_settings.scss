@@ -15,6 +15,16 @@ $tabbar-middle-padding: rem-calc(10);
 $off-canvas-overlay-background: rgba(#242424, 0.5);
 $off-canvas-overlay-background-hover: rgba(#242424, 0.1);
 
+// Accordion
+$accordion-navigation-bg-color: #242424;
+$accordion-content-padding: 0;
+
+// Side Nav
+$side-nav-list-margin: 0;
+$side-nav-padding: 0;
+$side-nav-link-color: scale-color(#FFF, $lightness: -10%);
+$side-nav-divider-color: scale-color(#242424, $lightness: 5%);
+
 // Colours
 // $primary-color: #008CBA;
 // $secondary-color: #e7e7e7;
