@@ -1,6 +1,6 @@
-$(document).foundation();
-
 (function ($) {
+    $(document).foundation();
+
     var $vAlign_padding = 0;
     var $vAlign_obj = $('.js-valign');
 
@@ -9,8 +9,10 @@ $(document).foundation();
         if ($vAlign_padding < 100) $vAlign_padding = 100;
         $vAlign_obj.css('padding', $vAlign_padding + 'px 0');
     }
-
     $vAlign();
-    $(window).resize($vAlign);
+
+    $(window).on('resize', Foundation.utils.throttle(function(e) {
+        $vAlign();
+    }, 300));
 
 })(jQuery);
