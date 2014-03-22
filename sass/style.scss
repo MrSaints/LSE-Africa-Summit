@@ -1,8 +1,16 @@
 @import "compass";
 @import "partials/settings";
-@import "foundation/scss/normalize";
+//@import "foundation/scss/normalize";
 @import "foundation/scss/foundation";
-@import "font-awesome/scss/font-awesome";
+//@import "font-awesome/scss/font-awesome";
+
+.morphist > * {
+    display: none;
+}
+
+.morphist > .animated {
+    display: inline-block;
+}
 
 body {
     background: image-url('background.jpg') no-repeat center center fixed;
@@ -37,6 +45,20 @@ body {
         vertical-align: top;
     }
 
+.multilevel {
+    &.active > a {
+        background: darken(#242424, 5%) !important;
+    }
+    .content li > a {
+        background: lighten(#242424, 10%);
+        border: none;
+
+        &:hover, &:focus {
+            background: #1abc9c;
+        }
+    }
+}
+
 .hero {
     padding: 10% 0;
     text-transform: uppercase;
@@ -55,7 +77,7 @@ body {
     .hero-action {
         background: rgba(#fdbe2b, .75);
         font-weight: bold;
-        margin-top: 2rem;
+        margin-top: rem-calc(16);
 
         &:hover, &:focus {
             background: rgba(#fdbe2b, .9);
@@ -64,7 +86,6 @@ body {
 
 .contributors {
     background: #FFF;
-    text-align: center;
     max-width: 100%;
 }
     .contributors-title {
@@ -86,20 +107,6 @@ body {
         }
     }
 
-.multilevel {
-    &.active > a {
-        background: darken(#242424, 5%) !important;
-    }
-    .content li > a {
-        background: lighten(#242424, 10%);
-        border: none;
-
-        &:hover, &:focus {
-            background: #1abc9c;
-        }
-    }
-}
-
 .twitter {
     background: $primary-color;
     color: #FFF;
@@ -107,9 +114,14 @@ body {
 
     .fa-twitter {
         font-size: rem-calc(50);
-        margin-bottom: rem-calc(15);
+        margin-bottom: rem-calc(16);
     }
 }
+    .twitter-feed {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
     .twitter-posted {
         color: #FFF;
         font-size: rem-calc(12);
@@ -118,10 +130,47 @@ body {
     }
     .twitter-tweet {
         color: #FFF;
-        margin: rem-calc(15) auto;
+        margin: rem-calc(16) auto;
     }
     .twitter-follow {
         border: 2px solid #FFF;
         font-weight: 300;
-        margin: rem-calc(15) auto 0;
+        margin: rem-calc(16) auto 0;
+    }
+
+.footer {
+    a {
+        color: darken(#FFF, 20%);
+        &:hover {
+            color: #1abc9c;
+        }
+    }
+}
+    .footer-links {
+        background: lighten(#242424, 5%);
+        padding: rem-calc(20) 0;
+        .menu-logo {
+            height: rem-calc(40);
+        }
+    }
+        .footer-nav {
+            font-size: rem-calc(12);
+            margin: rem-calc(10) 0;
+            text-shadow: 0 1px 0 rgba(#000, .5);
+            text-transform: uppercase;
+        }
+    .footer-copyright {
+        background: #242424;
+        color: darken(#FFF, 35%);
+        max-width: 100%;
+        padding: rem-calc(15) 0;
+        text-transform: uppercase;
+
+        .fa-heart {
+            color: #e0293f;
+        }
+
+        a {
+            font-weight: bold;
+        }
     }

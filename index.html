@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.0/animate.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 </head>
@@ -55,34 +58,60 @@
                     </div>
                 </div>
 
-                <div class="row contributors">
+                <div class="row contributors text-center">
                     <div class="large-2 columns">
                         <h6 class="contributors-title">Made Possible By</h6>
                     </div>
                     <div class="large-10 columns">
                         <ul class="contributors-list large-block-grid-8 medium-block-grid-4 small-block-grid-2">
-                            <li><a href="#"><img src="assets/img/logos/Zenith.png" alt=""></a></li>
-                            <li><a href="#"><img src="assets/img/logos/Prudential.png" alt=""></a></li>
-                            <li><a href="#"><img src="assets/img/logos/Airtel.png" alt=""></a></li>
-                            <li><a href="#"><img src="assets/img/logos/LSE-ID.png" alt=""></a></li>
-                            <li><a href="#"><img src="assets/img/logos/Africa-Business.png" alt=""></a></li>
-                            <li><a href="#"><img src="assets/img/logos/AfriMind.png" alt=""></a></li>
-                            <li><a href="#"><img src="assets/img/logos/AllAfrica.png" alt=""></a></li>
-                            <li><a href="#"><img src="assets/img/logos/This-is-Africa.png" alt=""></a></li>
+                            <li><a href="//www.zenithbank.com" target="_blank"><img src="assets/img/logos/Zenith.png" alt=""></a></li>
+                            <li><a href="//www.prudential.co.uk" target="_blank"><img src="assets/img/logos/Prudential.png" alt=""></a></li>
+                            <li><a href="//www.africa.airtel.com/wps/wcm/connect/africarevamp/Nigeria/" target="_blank"><img src="assets/img/logos/Airtel.png" alt=""></a></li>
+                            <li><a href="//www.lse.ac.uk/internationalDevelopment/home.aspx" target="_blank"><img src="assets/img/logos/LSE-ID.png" alt=""></a></li>
+                            <li><a href="//www.africanbusinessmagazine.com" target="_blank"><img src="assets/img/logos/Africa-Business.png" alt=""></a></li>
+                            <li><a href="//www.afrimind.org" target="_blank"><img src="assets/img/logos/AfriMind.png" alt=""></a></li>
+                            <li><a href="//www.eaecc.com" target="_blank"><img src="assets/img/logos/AllAfrica.png" alt=""></a></li>
+                            <li><a href="//www.thisisafricaonline.com" target="_blank"><img src="assets/img/logos/This-is-Africa.png" alt=""></a></li>
                         </ul>
                     </div>
                 </div>
 
-                <div class="twitter clearfix">
+                <div class="twitter">
                     <div class="row">
                         <div class="large-12 columns text-center">
                             <i class="fa fa-twitter"></i>
-                            <h6 class="twitter-posted">A few hours ago</h6>
-                            <h4 class="twitter-tweet">Morlem ipsum dolor sit amet consectetuer ad adipiscing elit Aenean commodo ligula eget dolor Nulla http://blip.74firmFXJZ consequat.</h4>
-                            <a href="#" class="twitter-follow button">Follow Us</a>
+                            <ul id="js-twitter" class="twitter-feed">
+                                <li><h4 class="twitter-tweet">Loading Tweets...</h4></li>
+                            </ul>
+                            <a href="//twitter.com/LSEAfricaSummit" class="twitter-follow button" target="twitter">Follow Us</a>
                         </div>
                     </div>
                 </div>
+
+                <footer class="footer">
+                    <div class="footer-links">
+                        <div class="row">
+                            <div class="large-4 columns">
+                                <a href="#">
+                                    <img src="assets/img/logo.png" class="menu-logo" alt="LSE Africa Summit">
+                                </a>
+                            </div>
+                            <div class="large-8 columns">
+                                <ul class="inline-list footer-nav right">
+                                    <li><a href="#">Register</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="//twitter.com/LSEAfricaSummit" target="twitter">Twitter</a></li>
+                                    <li><a href="//www.facebook.com/LSEAfricaSummit" target="facebook">Facebook</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row footer-copyright text-center">
+                        <small>&copy; LSE Africa Summit. Built with <span class="fa fa-heart"></span> by <a href="//www.github.com/MrSaints/LSE-Africa-Summit" target="enactus">Ian Lai</a>.</small>
+                    </div>
+                <footer>
             </section>
 
             <a class="exit-off-canvas"></a>
@@ -91,6 +120,8 @@
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.js"></script>
+    <script src="bower_components/momentjs/min/moment.min.js"></script>
+    <script src="bower_components/Morphist/dist/morphist.min.js"></script>
     <script src="assets/js/application.js"></script>
 </body>
 </html>
