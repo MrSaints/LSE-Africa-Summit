@@ -1,0 +1,84 @@
+.hero {
+    padding: 10% 0;
+    text-transform: uppercase;
+}
+    .hero-title {
+        color: #FFF;
+        font-size: em-calc(60);
+        font-weight: 800;
+        text-shadow: 0 1px 5px rgba(#000, .35);
+    }
+    .hero-subtitle {
+        color: #FFF;
+        font-size: em-calc(24);
+        font-weight: bold;
+    }
+    .hero-action {
+        background: rgba(#fdbe2b, .75);
+        font-weight: bold;
+        margin-top: rem-calc(16);
+
+        &:hover, &:focus {
+            background: rgba(#fdbe2b, .9);
+        }
+    }
+
+.contributors {
+    background: #FFF;
+    max-width: 100%;
+}
+    .contributors-title {
+        color: #2c3e50;
+        font-size: rem-calc(14);
+        font-weight: bold;
+        line-height: rem-calc(100);
+        margin: 0;
+        text-transform: uppercase;
+    }
+    .contributors-list {
+        height: 100px;
+        > li {
+            padding-bottom: 0;
+        }
+        img {
+            max-height: 100%;
+            vertical-align: top;
+        }
+    }
+
+.twitter {
+    background: $primary-color;
+    color: #FFF;
+    padding: rem-calc(30) 0;
+
+    .fa-twitter {
+        font-size: rem-calc(50);
+        margin-bottom: rem-calc(16);
+    }
+}
+    .twitter-feed {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        a {
+            color: #1abc9c;
+            &:hover, &:focus {
+                color: darken(#1abc9c, 10%);
+            }
+        }
+    }
+    .twitter-posted {
+        color: #FFF;
+        font-size: rem-calc(12);
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    .twitter-tweet {
+        color: #FFF;
+        margin: rem-calc(16) auto;
+    }
+    .twitter-follow {
+        border: 2px solid #FFF;
+        font-weight: 300;
+        margin: rem-calc(16) auto 0;
+    }

@@ -1,0 +1,36 @@
+.footer {
+    a {
+        color: darken(#FFF, 20%);
+        &:hover, &:focus {
+            color: #1abc9c;
+        }
+    }
+}
+    .footer-links {
+        background: lighten(#242424, 5%);
+        padding: rem-calc(20) 0;
+        .menu-logo {
+            height: rem-calc(40);
+        }
+    }
+        .footer-nav {
+            font-size: rem-calc(12);
+            margin: rem-calc(10) 0;
+            text-shadow: 0 1px 0 rgba(#000, .5);
+            text-transform: uppercase;
+        }
+    .footer-copyright {
+        background: #242424;
+        color: darken(#FFF, 35%);
+        max-width: 100%;
+        padding: rem-calc(15) 0;
+        text-transform: uppercase;
+
+        .fa-heart {
+            color: #e0293f;
+        }
+
+        a {
+            font-weight: bold;
+        }
+    }

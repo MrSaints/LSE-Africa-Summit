@@ -1,0 +1,9 @@
+@media #{$small-only} {
+    .footer-links {
+        text-align: center;
+    }
+    .footer-nav {
+        float: left !important;
+        margin: rem-calc(20) 0 0;
+    }
+}

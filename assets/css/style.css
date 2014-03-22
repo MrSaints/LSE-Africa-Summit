@@ -9524,17 +9524,17 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 7, ../../sass/style.scss */
+/* line 6, ../../sass/partials/_vendor.scss */
 .morphist > * {
   display: none;
 }
 
-/* line 11, ../../sass/style.scss */
+/* line 10, ../../sass/partials/_vendor.scss */
 .morphist > .animated {
   display: inline-block;
 }
 
-/* line 15, ../../sass/style.scss */
+/* line 1, ../../sass/partials/_main.scss */
 body {
   background: url('../img/background.jpg?1395181922') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -9542,7 +9542,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-/* line 19, ../../sass/style.scss */
+/* line 5, ../../sass/partials/_main.scss */
 body:after {
   background: rgba(37, 37, 37, 0.7);
   content: " ";
@@ -9553,50 +9553,50 @@ body:after {
   left: 0;
 }
 
-/* line 30, ../../sass/style.scss */
+/* line 16, ../../sass/partials/_main.scss */
 .container {
   position: relative;
   z-index: 1;
 }
 
-/* line 35, ../../sass/style.scss */
+/* line 21, ../../sass/partials/_main.scss */
 .off-canvas-wrap, .inner-wrap {
   min-height: 100%;
 }
 
-/* line 38, ../../sass/style.scss */
+/* line 24, ../../sass/partials/_main.scss */
 .off-canvas-wrap {
   height: 100%;
   overflow-y: auto;
 }
 
-/* line 43, ../../sass/style.scss */
+/* line 29, ../../sass/partials/_main.scss */
 .menu-logo {
   max-height: 100%;
   vertical-align: top;
 }
 
-/* line 49, ../../sass/style.scss */
+/* line 35, ../../sass/partials/_main.scss */
 .multilevel.active > a {
   background: #171717 !important;
 }
-/* line 52, ../../sass/style.scss */
+/* line 38, ../../sass/partials/_main.scss */
 .multilevel .content li > a {
   background: #3e3e3e;
   border: none;
 }
-/* line 56, ../../sass/style.scss */
+/* line 42, ../../sass/partials/_main.scss */
 .multilevel .content li > a:hover, .multilevel .content li > a:focus {
   background: #1abc9c;
 }
 
-/* line 62, ../../sass/style.scss */
+/* line 1, ../../sass/partials/_landing.scss */
 .hero {
   padding: 10% 0;
   text-transform: uppercase;
 }
 
-/* line 66, ../../sass/style.scss */
+/* line 5, ../../sass/partials/_landing.scss */
 .hero-title {
   color: #FFF;
   font-size: 3.75rem;
@@ -9604,31 +9604,31 @@ body:after {
   text-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
 }
 
-/* line 72, ../../sass/style.scss */
+/* line 11, ../../sass/partials/_landing.scss */
 .hero-subtitle {
   color: #FFF;
   font-size: 1.5rem;
   font-weight: bold;
 }
 
-/* line 77, ../../sass/style.scss */
+/* line 16, ../../sass/partials/_landing.scss */
 .hero-action {
   background: rgba(253, 190, 43, 0.75);
   font-weight: bold;
   margin-top: 1rem;
 }
-/* line 82, ../../sass/style.scss */
+/* line 21, ../../sass/partials/_landing.scss */
 .hero-action:hover, .hero-action:focus {
   background: rgba(253, 190, 43, 0.9);
 }
 
-/* line 87, ../../sass/style.scss */
+/* line 26, ../../sass/partials/_landing.scss */
 .contributors {
   background: #FFF;
   max-width: 100%;
 }
 
-/* line 91, ../../sass/style.scss */
+/* line 30, ../../sass/partials/_landing.scss */
 .contributors-title {
   color: #2c3e50;
   font-size: 0.875rem;
@@ -9638,40 +9638,48 @@ body:after {
   text-transform: uppercase;
 }
 
-/* line 99, ../../sass/style.scss */
+/* line 38, ../../sass/partials/_landing.scss */
 .contributors-list {
   height: 100px;
 }
-/* line 101, ../../sass/style.scss */
+/* line 40, ../../sass/partials/_landing.scss */
 .contributors-list > li {
   padding-bottom: 0;
 }
-/* line 104, ../../sass/style.scss */
+/* line 43, ../../sass/partials/_landing.scss */
 .contributors-list img {
   max-height: 100%;
   vertical-align: top;
 }
 
-/* line 110, ../../sass/style.scss */
+/* line 49, ../../sass/partials/_landing.scss */
 .twitter {
   background: #2c3e50;
   color: #FFF;
   padding: 1.875rem 0;
 }
-/* line 115, ../../sass/style.scss */
+/* line 54, ../../sass/partials/_landing.scss */
 .twitter .fa-twitter {
   font-size: 3.125rem;
   margin-bottom: 1rem;
 }
 
-/* line 120, ../../sass/style.scss */
+/* line 59, ../../sass/partials/_landing.scss */
 .twitter-feed {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+/* line 63, ../../sass/partials/_landing.scss */
+.twitter-feed a {
+  color: #1abc9c;
+}
+/* line 65, ../../sass/partials/_landing.scss */
+.twitter-feed a:hover, .twitter-feed a:focus {
+  color: #148f77;
+}
 
-/* line 125, ../../sass/style.scss */
+/* line 70, ../../sass/partials/_landing.scss */
 .twitter-posted {
   color: #FFF;
   font-size: 0.75rem;
@@ -9679,39 +9687,39 @@ body:after {
   text-transform: uppercase;
 }
 
-/* line 131, ../../sass/style.scss */
+/* line 76, ../../sass/partials/_landing.scss */
 .twitter-tweet {
   color: #FFF;
   margin: 1rem auto;
 }
 
-/* line 135, ../../sass/style.scss */
+/* line 80, ../../sass/partials/_landing.scss */
 .twitter-follow {
   border: 2px solid #FFF;
   font-weight: 300;
   margin: 1rem auto 0;
 }
 
-/* line 142, ../../sass/style.scss */
+/* line 2, ../../sass/partials/_footer.scss */
 .footer a {
   color: #cccccc;
 }
-/* line 144, ../../sass/style.scss */
-.footer a:hover {
+/* line 4, ../../sass/partials/_footer.scss */
+.footer a:hover, .footer a:focus {
   color: #1abc9c;
 }
 
-/* line 149, ../../sass/style.scss */
+/* line 9, ../../sass/partials/_footer.scss */
 .footer-links {
   background: #313131;
   padding: 1.25rem 0;
 }
-/* line 152, ../../sass/style.scss */
+/* line 12, ../../sass/partials/_footer.scss */
 .footer-links .menu-logo {
   height: 2.5rem;
 }
 
-/* line 156, ../../sass/style.scss */
+/* line 16, ../../sass/partials/_footer.scss */
 .footer-nav {
   font-size: 0.75rem;
   margin: 0.625rem 0;
@@ -9719,7 +9727,7 @@ body:after {
   text-transform: uppercase;
 }
 
-/* line 162, ../../sass/style.scss */
+/* line 22, ../../sass/partials/_footer.scss */
 .footer-copyright {
   background: #242424;
   color: #a6a6a6;
@@ -9727,11 +9735,24 @@ body:after {
   padding: 0.9375rem 0;
   text-transform: uppercase;
 }
-/* line 169, ../../sass/style.scss */
+/* line 29, ../../sass/partials/_footer.scss */
 .footer-copyright .fa-heart {
   color: #e0293f;
 }
-/* line 173, ../../sass/style.scss */
+/* line 33, ../../sass/partials/_footer.scss */
 .footer-copyright a {
   font-weight: bold;
+}
+
+@media only screen and (max-width: 40em) {
+  /* line 2, ../../sass/partials/_media.scss */
+  .footer-links {
+    text-align: center;
+  }
+
+  /* line 5, ../../sass/partials/_media.scss */
+  .footer-nav {
+    float: left !important;
+    margin: 1.25rem 0 0;
+  }
 }

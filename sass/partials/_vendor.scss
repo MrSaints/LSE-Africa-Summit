@@ -1,0 +1,12 @@
+@import "compass";
+//@import "foundation/scss/normalize";
+@import "foundation/scss/foundation";
+//@import "font-awesome/scss/font-awesome";
+
+.morphist > * {
+    display: none;
+}
+
+.morphist > .animated {
+    display: inline-block;
+}
