@@ -1,0 +1,16 @@
+/*!
+ * Theme Name: LSE Africa Summit
+ * Description: The official, custom-made WordPress theme for the LSE Africa Summit forum / event.
+ * Version: 1.0.0
+ * Author: Ian Lai
+ * Author URI: http://fyianlai.com/
+ */
+
+@import "partials/settings";
+@import "partials/vendor";
+@import "partials/main";
+@import "partials/footer";
+@import "partials/media";
+
+// Pages
+@import "partials/landing";
