@@ -18,7 +18,7 @@
         $tweets = '';
         for (var i = data.length - 1; i >= 0; i--) {
             $tweets += '<li><h6 class="twitter-posted">' + moment(data[i].created_at).fromNow() + '</h6>';
-            $tweets += '<h4 class="twitter-tweet">' + data[i].text + '</h4></li>';
+            $tweets += '<h4 class="twitter-tweet">' + twttr.txt.autoLinkWithJSON(data[i].text, data[i].entities) + '</h4></li>';
         };
         $('#js-twitter').html($tweets).Morphist({
             animateIn: "fadeInLeft",
