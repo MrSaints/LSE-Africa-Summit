@@ -7,6 +7,11 @@ function lseafricasummit_setup() {
 
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'post-thumbnails' );
+
+    register_nav_menus( array(
+        'primary'   => __( 'Off-canvas primary menu', 'lseafricasummit' ),
+        'secondary'   => __( 'Footer secondary menu', 'lseafricasummit' )
+    ) );
 }
 add_action( 'after_setup_theme', 'lseafricasummit_setup' );
 
@@ -15,9 +20,6 @@ function lseafricasummit_rss_version() { return ''; }
 function lseafricasummit_head_cleanup() {
     remove_action( 'wp_head', 'rsd_link' );
     remove_action( 'wp_head', 'wlwmanifest_link' );
-    remove_action( 'wp_head', 'index_rel_link' );
-    remove_action( 'wp_head', 'parent_post_rel_link', 10, 0 );
-    remove_action( 'wp_head', 'start_post_rel_link', 10, 0 );
     remove_action( 'wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
     remove_action( 'wp_head', 'wp_generator' );
     add_filter( 'style_loader_src', 'lseafricasummit_remove_wp_ver_css_js', 9999 );
@@ -89,3 +91,63 @@ function lseafricasummit_wp_title( $title, $sep ) {
     return $title;
 }
 add_filter( 'wp_title', 'lseafricasummit_wp_title', 10, 2 );
+
+function lseafricasummit_images() {
+    return get_template_directory_uri() . "/assets/img";
+}
+
+function lseafricasummit_side_nav() {
+    wp_nav_menu(array(
+        'theme_location' => 'primary',
+        'menu_class' => 'off-canvas-list',
+        'fallback_cb' => false,
+        'walker' => new lseafricasummit_walker(),
+        'depth' => 2
+    ));
+}
+
+function lseafricasummit_footer_nav() {
+    wp_nav_menu(array(
+        'theme_location' => 'secondary',
+        'menu_class' => 'inline-list footer-nav right',
+        'depth' => 1
+    ));
+}
+
+class lseafricasummit_walker extends Walker_Nav_Menu {
+    function display_element( $element, &$children_elements, $max_depth, $depth, $args, &$output ) {
+        $element->has_children = !empty( $children_elements[$element->ID] );
+
+        parent::display_element( $element, $children_elements, $max_depth, $depth, $args, $output );
+    }
+
+    function start_el( &$output, $object, $depth = 0, $args = array(), $current_object_id = 0 ) {
+        $item_html = '';
+        parent::start_el( $item_html, $object, $depth, $args, $current_object_id );
+
+        if ($object->has_children) {
+            $new_html = '
+                <dl class="accordion" data-accordion><dd class="multilevel">
+                    <a href="#multilevel' . $object->ID . '">$1</a>
+                    <div id="multilevel' . $object->ID . '" class="content">
+            ';
+            $item_html = preg_replace(
+                '/<a[^>]*>(.*)<\/a>/iU', $new_html, $item_html
+            );
+        }
+
+        $output .= $item_html;
+
+        if ($depth === 1) {
+            $output .= '<li class="divider"></li>';
+        }
+    }
+
+    function start_lvl( &$output, $depth = 0, $args = array() ) {
+        $output .= "\n<ul class=\"side-nav\">\n";
+    }
+
+    function end_lvl( &$output, $depth = 0, $args = array() ) {
+        $output .= "\n</ul></div></dd></dl>\n";
+    }
+}

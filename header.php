@@ -19,8 +19,8 @@
         <div class="inner-wrap">
             <nav class="tab-bar">
                 <section class="left tab-bar-section">
-                    <a href="#" title="Home">
-                        <img src="assets/img/logo.png" class="menu-logo" alt="LSE Africa Summit">
+                    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Home" rel="home">
+                        <img src="<?php echo lseafricasummit_images() ?>/logo.png" class="menu-logo" alt="LSE Africa Summit">
                     </a>
                 </section>
 
@@ -29,6 +29,8 @@
                 </section>
             </nav>
 
-            <?php get_sidebar() ?>
+            <aside class="right-off-canvas-menu">
+                <?php lseafricasummit_side_nav() ?>
+            </aside>
 
             <section class="main-section">
