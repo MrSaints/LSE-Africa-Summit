@@ -28,10 +28,9 @@ function lseafricasummit_head_cleanup() {
 
 function lseafricasummit_scripts_and_styles() {
     // Header
-    wp_enqueue_style(
-        'google-web-fonts',
-        '//fonts.googleapis.com/css?family=Open+Sans:300,400,700,800'
-    );
+    wp_deregister_style( 'open-sans' );
+    wp_register_style( 'open-sans', '//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,800italic,400,300,700,800' );
+
     wp_enqueue_style(
         'normalize-css',
         '//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css'
@@ -49,7 +48,7 @@ function lseafricasummit_scripts_and_styles() {
 
     // Footer
     wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', false, '2.1.0' );
+    wp_register_script( 'jquery', '//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js', false, '2.1.0', true );
 
     wp_enqueue_script(
         'lseafricasummit-plugins',
@@ -151,3 +150,62 @@ class lseafricasummit_walker extends Walker_Nav_Menu {
         $output .= "\n</ul></div></dd></dl>\n";
     }
 }
+
+function speakers_post_type() {
+    $labels = array(
+        'name' => _x("Speakers", "post type general name"),
+        'singular_name' => _x("Speaker", "post type singular name"),
+        'menu_name' => 'Speaker Profiles',
+        'add_new' => _x("Add New", "speaker item"),
+        'add_new_item' => __("Add New Profile"),
+        'edit_item' => __("Edit Profile"),
+        'new_item' => __("New Profile"),
+        'view_item' => __("View Profile"),
+        'search_items' => __("Search Profiles"),
+        'not_found' =>  __("No Profiles Found"),
+        'not_found_in_trash' => __("No Profiles Found in Trash"),
+        'parent_item_colon' => ''
+    );
+
+    register_post_type( 'speakers', array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => false,
+        'menu_icon' => 'dashicons-groups',
+        'rewrite' => false,
+        'supports' => array('title', 'editor', 'thumbnail')
+    ) );
+}
+
+add_action( 'init', 'speakers_post_type', 0 );
+
+function speaker_taxonomy() {
+    
+    // Labels
+    $singular = 'Role / Forum';
+    $plural = 'Roles / Forums';
+    $labels = array(
+        'name' => _x( $plural, "taxonomy general name"),
+        'singular_name' => _x( $singular, "taxonomy singular name"),
+        'search_items' =>  __("Search $singular"),
+        'all_items' => __("All $singular"),
+        'parent_item' => __("Parent $singular"),
+        'parent_item_colon' => __("Parent $singular:"),
+        'edit_item' => __("Edit $singular"),
+        'update_item' => __("Update $singular"),
+        'add_new_item' => __("Add New $singular"),
+        'new_item_name' => __("New $singular Name"),
+    );
+
+    register_taxonomy( strtolower($singular), 'speakers', array(
+        'public' => true,
+        'show_ui' => true,
+        'show_in_nav_menus' => true,
+        'hierarchical' => true,
+        'query_var' => true,
+        'rewrite' => false,
+        'labels' => $labels
+    ) );
+}
+
+add_action( 'init', 'speaker_taxonomy', 0 );
